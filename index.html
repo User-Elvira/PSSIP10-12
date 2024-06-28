@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script >
+        
+        function time() 
+        {
+            const today = new Date(); 
+            alert("Номер текущего дня в месяце: " + today.getDate());
+        };
+      </script>
+</head>
+<body>
+   
+    <button onclick='time()' id="myButton">Показать год</button>
+    <div class="result"></div>
+
+    <input type="text" id="number">
+    <button onclick="name_n()">Вывести имя и фамилию</button>
+    <script type="text/javascript">
+        function name_n(){
+            var n_inp = document.getElementById("number").value;
+            var int_number = parseInt(n_inp); 
+            for (var i=0;i<int_number+5;i++)
+                {
+                    document.write("Ваши фамилия имя ");
+                    document.write("<br>");
+                }
+            }
+    </script>
+
+    <script>
+        const arr = [2, -5, 10, -3, 7];
+        const positiveSum = arr.reduce((acc, curr) => { if (curr > 0) { return acc + curr; } return acc; }, 0);
+        const sortedArr = arr.sort((a, b) => a - b);
+        document.write("<br>"+"Исходный массив: " + arr + "<br>");
+        document.write("Сумма положительных элементов: " + positiveSum + "<br>");
+        document.write("Отсортированный массив: " + sortedArr + "<br>");
+    </script>
+
+    <input type="text" id="number_x">
+    <button onclick="func_x()">Рассчитать</button>
+    <p id="result"></p>
+    <script src="script_math.js"></script>
+
+    <script>
+        var S1 = "ВАШЕ ИМЯ";
+        var S2 = "ВАШИ УВЛЕЧЕНИЯ";
+        var extraSpaces = " "; // Дополнительные пробелы
+
+        S2 = S2 + extraSpaces; 
+        document.write("Длина строки S1" + " " + S1.length + "<br>");
+        document.write("Строка S2 с дополнительными пробелами: " + S2 + "<br>"); 
+
+        newS1 = S1.replace("ВАШЕ ИМЯ", "Павел");
+        document.write("Новая строка S1:" + " " + newS1);
+    </script>
+</body>
+</html>
